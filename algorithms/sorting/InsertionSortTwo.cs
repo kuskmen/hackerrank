@@ -27,7 +27,7 @@ class Solution
 
                                                                                                                          static void Main(string[] args)
      {
-                                                                                                                                int n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
             int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), Convert.ToInt32);
             insertionSort2(n, arr);
      }

@@ -1,3 +1,10 @@
 # Vim generated files
 *.swp
 *.orig
+
+# Output directory
+src/bin
+src/obj
+
+# Visual Studio generated files
+src/.vs

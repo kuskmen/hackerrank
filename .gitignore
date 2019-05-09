@@ -3,8 +3,12 @@
 *.orig
 
 # Output directory
-src/bin
-src/obj
+bin/
+obj/
+Debug/
+Release/
 
 # Visual Studio generated files
-src/.vs
+.vs/
+*.vcxproj
+*.vcxproj.*

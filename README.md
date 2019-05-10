@@ -1,2 +1,2 @@
-# hackerrank
-Repo where I will put my submissions from hackerrank
+# Problem solving practice
+Repo where I will put my submissions from various coding challange websites.

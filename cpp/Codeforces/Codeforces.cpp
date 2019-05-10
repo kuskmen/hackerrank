@@ -3,5 +3,5 @@
 
 int main()
 {
-	Codeforces_1157C1();
+	Codeforces_1157A();
 }

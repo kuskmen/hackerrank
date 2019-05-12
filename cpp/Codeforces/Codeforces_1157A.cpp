@@ -23,6 +23,11 @@
  * Output
  * Print one integer: the number of different numbers that are reachable from n.
 */
+
+/*
+ * Complexity : O(n)
+ * Memory     : O(1)     
+ */
 void Codeforces_1157A()
 {
 	long n;

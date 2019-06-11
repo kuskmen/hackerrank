@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <vector>
 #include <algorithm>
 #include <list>
 
@@ -31,6 +30,11 @@
  *  If there are multiple answers, you can print any.
  */
 
+/*
+ * Comlexity : O(n)
+ * Memory    : O(m) where m =< n
+ */
+
 void Codeforces_1157C1()
 {
 	long length;
@@ -40,11 +44,10 @@ void Codeforces_1157C1()
 	{
 		int num;
 		std::cin >> num;
-		sequence.insert(sequence.end(), num);
-		std::cout << num;
+		sequence.emplace_back(num);
 	}
 
-	std::vector<std::string> result;
+	std::string result;
 	auto operate = [](std::string & operations, std::list<int> & sequence, int comparing)
 	{
 		if (comparing == sequence.front())
@@ -59,34 +62,26 @@ void Codeforces_1157C1()
 		}
 	};
 
+	int min = std::min(sequence.front(), sequence.back());
+	std::string operations{};
+
+	operate(operations, sequence, min);
+
 	while (!sequence.empty())
 	{
-		int min = std::min(sequence.front(), sequence.back());
-		std::string operations{};
+		int front = sequence.front();
+		int back = sequence.back();
 
-		operate(operations, sequence, min);
+		int greater = std::min(front, back) < min ? std::max(front, back) : std::min(front, back);
 
-		while (!sequence.empty())
-		{
-			int front = sequence.front();
-			int back = sequence.back();
+		if (greater < min) break;
 
-			int greater = std::min(front, back) < min ? std::max(front, back) : std::min(front, back);
+		min = greater;
 
-			if (greater < min) break;
-
-			operate(operations, sequence, greater);
-		}
-
-		result.insert(result.begin(), operations);
-
-		if (result.size() > 1) {
-			std::sort(result.begin(), result.end(),
-				[](std::string first, std::string second) -> bool
-				{ return first.size() > second.size(); });
-			result.pop_back();
-		}
+		operate(operations, sequence, greater);
 	}
 
-	std::cout << result[0].size() << std::endl << result[0];
+	result = result.size() > operations.size() ? result : operations;
+
+	std::cout << result.size() << std::endl << result;
 }

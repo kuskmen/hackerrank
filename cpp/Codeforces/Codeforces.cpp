@@ -3,8 +3,10 @@
 #include <set>
 
 #include "Codeforces.h"
+#include "Common.h"
 
 int main()
 {
-	Codeforces_1169B();
+	KnuthMorrisPratt("ABABDABACDABABCABAB", "ABABCABAB");
 }
+

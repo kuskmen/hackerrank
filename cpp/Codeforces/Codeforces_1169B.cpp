@@ -22,7 +22,9 @@
 	at least one integer is equal to x or y. Otherwise, print "NO". You can print each letter 
 	in any case (upper or lower).
 */
-
+/*
+	Difficulty: 1500
+*/
 /*
 	Complexity: O(n)
 	Memory: O(m) where m = 2*n+2 

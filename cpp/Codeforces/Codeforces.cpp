@@ -7,6 +7,6 @@
 
 int main()
 {
-	KnuthMorrisPratt("ABABDABACDABABCABAB", "ABABCABAB");
+	Codeforces_2A();
 }
 

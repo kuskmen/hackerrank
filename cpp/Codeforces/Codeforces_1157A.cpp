@@ -23,7 +23,9 @@
  * Output
  * Print one integer: the number of different numbers that are reachable from n.
 */
-
+/*
+	Difficulty : 1100
+*/
 /*
  * Complexity : O(n)
  * Memory     : O(1)     

@@ -1,6 +1,6 @@
 #include "Common.h"
 
-auto KnuthMorrisPratt(std::string text, std::string pattern)
+std::vector<int> KnuthMorrisPratt(std::string text, std::string pattern)
 {
 	std::vector<int> indexes;
 	int text_len = 0, pattern_len = 0;

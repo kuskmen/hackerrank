@@ -29,7 +29,9 @@
  *  should be 'L' if you take the leftmost element during the j - th move and 'R' otherwise.
  *  If there are multiple answers, you can print any.
  */
-
+/*
+	Difficulty: 1300
+*/
 /*
  * Comlexity : O(n)
  * Memory    : O(m) where m =< n

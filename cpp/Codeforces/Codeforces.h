@@ -6,6 +6,7 @@ int Codeforces_1157E();
 int Codeforces_1169B();
 int Codeforces_2A();
 int Codeforces_4B();
+int Codeforces_4C();
 
 #endif // !_CODEFORCES_H
 

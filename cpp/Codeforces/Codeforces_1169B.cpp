@@ -29,7 +29,7 @@
 	Complexity: O(n)
 	Memory: O(m) where m = 2*n+2 
 */
-void Codeforces_1169B()
+int Codeforces_1169B()
 {
 	std::pair<int, int> n_m;
 
@@ -67,9 +67,10 @@ void Codeforces_1169B()
 		if (*std::max_element(missing.begin(), missing.end()) == all_missing)
 		{
 			std::cout << "YES";
-			return;
+			return 0;
 		}
 	}
 
 	std::cout << "NO";
+	return 0;
 }

@@ -37,7 +37,7 @@
  * Memory    : O(m) where m =< n
  */
 
-void Codeforces_1157C1()
+int Codeforces_1157C1()
 {
 	long length;
 	std::cin >> length;
@@ -86,4 +86,5 @@ void Codeforces_1157C1()
 	result = result.size() > operations.size() ? result : operations;
 
 	std::cout << result.size() << std::endl << result;
+	return 0;
 }

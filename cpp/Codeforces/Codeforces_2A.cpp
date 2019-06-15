@@ -41,7 +41,7 @@
 	Complexity: O(n)
 	Memory: O(m)
  */
-void Codeforces_2A()
+int Codeforces_2A()
 {
 	int n;
 	std::cin >> n;
@@ -104,4 +104,5 @@ void Codeforces_2A()
 	});
 
 	std::cout << winner.first << std::endl;
+	return 0;
 }

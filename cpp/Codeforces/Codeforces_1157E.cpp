@@ -34,7 +34,7 @@
 	Memory: O(1)
 
  */
-void Codeforces_1157E()
+int Codeforces_1157E()
 {
 	int n;
 	std::cin >> n;
@@ -60,4 +60,6 @@ void Codeforces_1157E()
 		
 		b.erase(x);
 	}
+
+	return 0;
 }

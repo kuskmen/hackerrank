@@ -1,10 +1,11 @@
 #ifndef _CODEFORCES_H
 
-void Codeforces_1157C1();
+int Codeforces_1157C1();
 void Codeforces_1157A();
-void Codeforces_1157E();
-void Codeforces_1169B();
-void Codeforces_2A();
+int Codeforces_1157E();
+int Codeforces_1169B();
+int Codeforces_2A();
+int Codeforces_4B();
 
 #endif // !_CODEFORCES_H
 

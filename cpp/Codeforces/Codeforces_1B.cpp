@@ -23,7 +23,7 @@
 	Input
 	The first line of the input contains integer number n (1 ≤ n ≤ 10^5), the number of coordinates 
 	in the test. Then there follow n lines, each of them contains coordinates. All the coordinates 
-	are correct, there are no cells with the column and/or the row numbers larger than 106.
+	are correct, there are no cells with the column and/or the row numbers larger than 10^6.
 
 	Output
 	Write n lines, each line should contain a cell coordinates in the other numeration system.
@@ -56,19 +56,50 @@ int Codeforces_1B()
 
 	for (int i = 0; i < n; i++)
 	{
+		std::regex coordinate("\\d+");
+		std::sregex_iterator next(coordinates[i].begin(), coordinates[i].end(), coordinate);
 		if (std::regex_match(coordinates[i], second_type))
 		{
-			int row = std::stoi(std::string({ coordinates[i][1], coordinates[i][2] }));
-			int column = std::stoi(std::string({ coordinates[i][4], coordinates[i][5] }));
+			int row = std::stoi((*next).str());
+			++next;
+			int column = std::stoi((*next).str());
 
-			std::cout << alphabet[row] << " " << row << std::endl;
+			int index = 0;
+			while (column > 26)
+			{
+				column -= 26;
+				++index;
+			}
+
+			std::string col;
+			if (index == 0)
+				col = alphabet[column];
+			else
+				col = std::string({ alphabet[index % 26], alphabet[column] });
+			
+			std::cout << col << row << std::endl;
 		}
 		else
 		{
+			int row = std::stoi((*next).str());
+			
+			int chars = 0;
+			char c = coordinates[i][chars];
+			std::string letters;
+			while (c >= 'A' && c <= 'Z' && ++chars)
+			{
+				letters.append(std::string(1, c));
+				c = coordinates[i][chars];
+			}
 
+			int column = 0;
+			for (auto letter = 0; letter < letters.size() - 1; ++letter)
+				column += alphabet.find(letters[letter]) * 26;
+			column += alphabet.find(letters[letters.size() - 1]);
+
+			std::cout << "R" << row << "C" << column << std::endl;
 		}
 	}
-	
 
 	return 0;
 }
